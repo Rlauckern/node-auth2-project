@@ -55,6 +55,11 @@ function findById(user_id) {
       "role_name": "instructor"
     }
    */
+    return db('users')
+    .join('roles', 'users.role_id', 'roles.role_id')
+    .select('user_id', 'username', 'password', 'role_name')
+    .where('users.user_id', user_id).first()
+
 }
 
 /**
@@ -74,7 +79,10 @@ function findById(user_id) {
     "username": "anna",
     "role_name": "team lead"
   }
+
  */
+
+
 async function add({ username, password, role_name }) { // done for you
   let created_user_id
   await db.transaction(async trx => {
