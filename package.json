@@ -19,12 +19,13 @@
     "supertest": "^6.2.2"
   },
   "dependencies": {
-    "@vscode/sqlite3": "5.0.7",
+    "@vscode/sqlite3": "^5.0.8",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "helmet": "^5.0.2",
-    "knex": "^1.0.3"
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.0.0"
   },
   "repository": {
     "type": "git",
